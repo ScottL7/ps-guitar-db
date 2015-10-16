@@ -16,7 +16,6 @@ public class ModelType {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
-
 	private String name;	
 
 	@OneToMany(cascade=CascadeType.ALL)
