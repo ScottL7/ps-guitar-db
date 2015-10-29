@@ -22,7 +22,7 @@ public interface ModelJpaRepository extends JpaRepository<Model, Long>, ModelJpa
     //    select m from Model m where m.price >= :lowest and m.price <= :highest and m.woodType like :wood
     List<Model> findByPriceGreaterThanEqualAndPriceLessThanEqualAndWoodTypeContaining(BigDecimal low, BigDecimal high, String wood);
 
-    List<Model> findByModelTypeNameIn(List<String> types);
+    List<Model> findByModelType_NameIn(List<String> types);
 
 //    //select m from Model m where m.price >= :lowest and m.price <= :highest and m.woodType like :wood
 //    @Query("select m from Model m where m.price >= :lowest and m.price <= :highest and m.woodType like :wood")

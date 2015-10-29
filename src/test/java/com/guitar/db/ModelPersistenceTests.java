@@ -82,7 +82,7 @@ public class ModelPersistenceTests {
 		List<String> types = new ArrayList<>();
 		types.add("Electric");
 		types.add("Acoustic");
-		List<Model> mods = modelJpaRepository.findByModelTypeNameIn(types);
+		List<Model> mods = modelJpaRepository.findByModelType_NameIn(types);
 
 		mods.forEach((model -> {
 			assertTrue(model.getModelType().getName().equals("Electric") ||
